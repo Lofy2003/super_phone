@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>التواصل معنا</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/90dd490cce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="direction: rtl;">
+    <nav>
+        <div class="logo"> <i class="fa fa-mobile" aria-hidden="true"></i>
+            <h4>سوبر فون</h4>
+        </div>
+
+        <ul class="nav_item">
+            <li class="nav_items">
+                <a href="index.html" class="nav-link">الصفحة الرئيسية </a>
+            </li>
+
+            <li class="nav_items">
+                <a href="advantages.html" class="nav-link">ميزاتنا </a>
+            </li>
+
+            <li class="nav_items">
+                <a href="modernphones.html" class="nav-link">أحدث الهواتف</a>
+
+            </li>
+        </ul>
+
+    </nav>
+    <section class="advantages" id="advantages">
+        <div class="advantage">
+            <h4>للتواصل معنا</h4>
+            <div class="qualities">
+                <div class="quality">
+                    <a href="mailto:ata.2019.atam@gmail.com">
+                        <i class="fa-solid fa-envelope" id="email-icon" style="cursor: pointer;"></i>
+                    </a>
+                    <h3>البريد الإلكتروني</h3>
+                
+                </div>
+                <div class="quality">
+                    <i class="fa-solid fa-phone" id="phone-icon"></i>
+                    <h3>الهاتف</h3>
+                
+                </div>
+
+                <div class="quality">
+                   
+           
+
+                    <i class="fa-sharp fa-solid fa-location-dot" id="map-icon" style="cursor: pointer;"></i> 
+            
+                    <h3>العنوان</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer_section">
+            <p>للتواصل عبر السوشل ميديا</p>
+            <div class="socials">
+                <a href="https://twitter.com/?lang=ar">
+                    <i class="fab fa-twitter">
+
+                    </i>
+                </a>
+                <a href="https://ar-ar.facebook.com/">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+<script>
+    document.getElementById('map-icon').addEventListener('click', openGoogleMaps);
+    
+  
+    function openGoogleMaps() {
+        var latitude = 31.495799; 
+        var longitude = 34.468463; 
+    
+        var url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+        window.open(url, '_blank');
+
+
+    }
+
+    document.getElementById('email-icon').addEventListener('click', openEmail)
+        function openEmail() {
+            const emailAddress = 'alaa212.zero@gmail.com';
+            const encodedEmail = encodeURIComponent(emailAddress);
+            location.href = `mailto:${encodedEmail}`;
+            
+
+
+        }
+        document.getElementById('phone-icon').addEventListener('click', openPhone)
+        function openPhone() {
+            alert("+972 597240740");
+
+        }
+    </script>
+
+</body>
+
+</html>
